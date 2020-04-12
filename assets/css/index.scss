@@ -1,0 +1,131 @@
+/** @format */
+
+body {
+    background-color: #fbe8a6;
+    // font-family: 'Nunito', sans-serif;
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+}
+
+.nav-1 {
+    background-color: #303c6c;
+    .brand {
+        color: #d2fdff;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+    }
+    ul {
+        li {
+            a {
+                font-size: 14px;
+                color: #d2fdff;
+                font-weight: bold;
+                font-family: "Roboto", sans-serif;
+            }
+            a:hover {
+                color: #b4dfe5;
+            }
+        }
+    }
+}
+
+.jumbo {
+    height: 650px;
+    background-image: url(../images/img-header.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #303c6c;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 4px 4px 2px #fbe8a6;
+}
+
+.row-1 {
+    color: #303c6c;
+    .row-12 {
+        background-color: #d2fdff;
+        padding: 20px 50px;
+        border-radius: 5px;
+
+        .i {
+            margin-bottom: 20px;
+        }
+    }
+    padding: 5px;
+}
+.con-2 {
+    background-color: #f4976c;
+    h3 {
+        color: #303c6c;
+        font-weight: bold;
+    }
+
+    .card-1 {
+        background-color: #d2fdff;
+        font-size: 14px;
+    }
+}
+.foot {
+    background-color: #303c6c;
+    font-family: "Roboto", sans-serif;
+    color: #d2fdff;
+}
+
+//Login.html
+// Registrasi.html
+.reg-card-1 {
+    background-color:  #b4dfe5;
+    .head {
+        background-color: #f4976c;
+        color: #303c6c;
+    }
+    button {
+        background-color: #303c6c;
+        color: #d2fdff;
+    }
+    button:hover {
+        background-color: #303c6c;
+        color: #f4976c;
+    }
+}
+
+// Dashboard.html
+.dash-con-1 {
+    min-height: 460px;
+    span {
+        button {
+            background-color: #303c6c;
+            color: #d2fdff;
+        }
+        button:hover {
+            background-color: #303c6c;
+            color: #f4976c;
+        }
+    }
+}
+
+.bread {
+    background-color: #b4dfe5;
+    a {
+        color: #303c6c;
+    }
+    a:hover {
+        color: #d2fdff;
+    }
+}
+
+//Profile.html
+.pro-con-1 {
+    min-height: 460px;
+}
+
+// #FBE8A6;
+// #F4976C;
+// #303C6C;
+// #B4DFE5;
+// #D2FDFF;

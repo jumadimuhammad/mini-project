@@ -1,0 +1,240 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <!-- Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Roboto&family=Roboto+Condensed&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Karla&family=Nunito:wght@300;400&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./assets/css/all.css" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
+        <title>Buku Q</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm nav-1 fixed-top">
+            <div class="container">
+                <a class="navbar-brand brand" href="./index.html">BUKUQ</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars" style="color: aqua;"></i>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html"
+                                >Home <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="is-regis"
+                                href="./register.html"
+                                >Sign up</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="is-login"
+                                href="./login.html"
+                                ><span>Sign in</span></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbo">
+            <p><strong>Welcome in BUKUQ</strong></p>
+            <p>Spirit to explore the world</p>
+        </div>
+        <div class="container">
+            <div class="row row-1">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 text-center row-12 my-3">
+                            <i
+                                class="fas fa-american-sign-language-interpreting fa-3x i"
+                            ></i>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quidem quibusdam aut odio
+                                optio ipsum. Laborum quos, et tempore neque
+                                minima suscipit corrupti. Explicabo vitae culpa
+                                accusamus maiores repudiandae? Tenetur,
+                                facilis.</p
+                            >
+                        </div>
+                        <div class="col-md-4 text-center p-4">
+                            <i class="fab fa-500px fa-2x"></i>
+                            <h2>Trusted</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vero ipsam deleniti quisquam,
+                                exercitationem consequuntur quaerat corporis
+                                quidem minus.</p
+                            >
+                        </div>
+                        <div class="col-md-4 text-center p-4">
+                            <i class="fas fa-pen-nib fa-2x"></i>
+                            <h2>Updeted</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Modi quaerat esse aperiam
+                                ipsum quis ullam facere quo quam velit rerum
+                                delectus, mollitia.</p
+                            >
+                        </div>
+                        <div class="col-md-4 text-center p-4">
+                            <i class="fas fa-list fa-2x"></i>
+                            <h2>Completed</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Repellat quisquam quod eum
+                                numquam quidem repudiandae placeat aperiam
+                                veritatis quae incidunt.</p
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-3 con-2">
+            <div class="container">
+                <h3>Collection</h3>
+                <div class="row" id="display">
+                    <!-- display -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Start modal display detail -->
+        <div
+            class="modal fade bd-example-modal-lg"
+            id="detail"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-lg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"
+                            >Detail</h5
+                        >
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-3" id="img"> </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <ul
+                                        class="list-group list-group-flush"
+                                        id="content"
+                                    >
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            data-dismiss="modal"
+                            >Close</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal display detail -->
+
+        <div class="container-fluid">
+            <div class="row my-3">
+                <div class="col-sm-12 text-center p-5">
+                    <h1>Newsletter</h1>
+                    <p
+                        >Sign up to receive the latest news, exclusive offers,
+                        and other information from BUKUQ.</p
+                    >
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <input
+                                class="form-control rounded-3"
+                                type="text"
+                                placeholder="Enter email address"
+                            />
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid foot">
+            <div class="container p-2 text-center">
+                <p>copyright @ Mizuchi</p>
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+        <!-- <script src="./login.js"></script> -->
+        <script src="./assets/js/all.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

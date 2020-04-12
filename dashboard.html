@@ -1,0 +1,351 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <!-- Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Roboto&family=Roboto+Condensed&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./assets/css/all.css" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
+        <title>Buku Q</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm nav-1 fixed-top">
+            <div class="container">
+                <a class="navbar-brand brand" href="#">BUKUQ</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars" style="color: aqua;"></i>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./indexTrue.html"
+                                >Home <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="myPage"
+                                href="./dashboard.html"
+                                >My page</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="log" href="">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="py-3"></div>
+        <div class="container mt-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bread">
+                    <li class="breadcrumb-item"
+                        ><a href="./dashboard.html">Collection</a></li
+                    >
+                    <li class="breadcrumb-item"
+                        ><a href="./profile.html">Profile</a></li
+                    >
+                </ol>
+            </nav>
+        </div>
+        <div class="container-fluid dash-con-1 con-2 p-3">
+            <div class="container">
+                <h3
+                    >Collection
+                    <span class="float-right"
+                        ><button
+                            class="btn"
+                            data-toggle="modal"
+                            data-target="#collection"
+                            ><i class="fas fa-plus-circle"></i> Add
+                            Collectin</button
+                        ></span
+                    >
+                </h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search" placeholder="Search" />
+                </div>
+
+                <div class="row" id="display">
+                    <!-- display -->
+                </div>
+            </div>
+        </div>
+
+        <div id="modal"></div>
+
+        <!-- Start modal add collection -->
+        <div
+            class="modal fade bd-example-modal-lg"
+            id="collection"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-lg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLongTitle"
+                            >Add collection</h5
+                        >
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <form id="add-form">
+                                        <div class="form-group">
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                id="title"
+                                                placeholder="Title of book"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                id="author"
+                                                placeholder="Name of author"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <input
+                                                    class="form-control"
+                                                    type="text"
+                                                    id="publisher"
+                                                    placeholder="Name of publisher"
+                                                    required
+                                                />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <input
+                                                    class="form-control"
+                                                    type="text"
+                                                    id="thickness"
+                                                    placeholder="Thickness of page"
+                                                    required
+                                                />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <input
+                                                    class="form-control"
+                                                    type="text"
+                                                    id="publication"
+                                                    placeholder="Year of publication"
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea
+                                                class="form-control"
+                                                type="text"
+                                                id="description"
+                                                placeholder="Description of book"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                id="price"
+                                                placeholder="Price of book"
+                                                required
+                                            />
+                                        </div>
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary"
+                                            data-dismiss="modal"
+                                            >Cancel</button
+                                        >
+                                        <button
+                                            class="btn btn-primary"
+                                            type="submit"
+                                            ><i class="fas fa-plus-circle"></i>
+                                            Add</button
+                                        >
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End modal add collection -->
+
+        <!-- Start modal display detail -->
+        <div
+            class="modal fade bd-example-modal-lg"
+            id="exampleModalCenter"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-lg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"
+                            >Detail</h5
+                        >
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-3" id="img"> </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <ul
+                                        class="list-group list-group-flush"
+                                        id="content"
+                                    >
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                            >Close</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal display detail -->
+
+        <!-- Start modal edit collection -->
+        <div
+            class="modal fade bd-example-modal-lg"
+            id="edit"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-lg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLongTitle"
+                            >Add collection</h5
+                        >
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <form id="edit-form">
+                                        <!-- display -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End modal edit collection -->
+
+        <div class="container-fluid foot">
+            <div class="container text-light p-2 text-center">
+                <p>copyright @ Mizuchi</p>
+            </div>
+        </div>
+
+        <script src="./dashboard.js"></script>
+        <script src="./assets/js/all.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
