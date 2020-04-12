@@ -157,8 +157,10 @@ if (isLog == "true") {
             const author = document.querySelector("#edit-author").value;
             const publisher = document.querySelector("#edit-publisher").value;
             const thickness = document.querySelector("#edit-thickness").value;
-            const publication = document.querySelector("#edit-publication").value;
-            const description = document.querySelector("#edit-description").value;
+            const publication = document.querySelector("#edit-publication")
+                .value;
+            const description = document.querySelector("#edit-description")
+                .value;
             const price = document.querySelector("#edit-price").value;
 
             const update = {
@@ -185,6 +187,21 @@ if (isLog == "true") {
         }
     };
 
+    const searchInput = document.querySelector("#searchCollection");
+    const searchCollection = async () => {
+        const response = await fetch(url);
+        const result = await response.json();
+        const input = document.querySelector("#searchCollection").value;
+
+        const filterCollection = result.filter((element) => {
+            if (element.title.includes(input)) {
+                return element;
+            }
+        });
+        console.log(filterCollection)
+        getData(filterCollection);
+    };
+
     let logBtn = document.querySelector("#log");
 
     let logOut = () => {
@@ -199,6 +216,7 @@ if (isLog == "true") {
     editForm.addEventListener("click", editCollection);
     display.addEventListener("click", readDetail);
     display.addEventListener("click", readEdit);
+    searchInput.addEventListener("keyup", searchCollection);
     logBtn.addEventListener("click", logOut);
 } else {
     window.location.href = `${window.origin}/login.html`;
