@@ -58,12 +58,12 @@ const readDetail = async (event) => {
             alt=""/> 
             <p class="mt-2 text-info">Rp. ${result.price}</p>`;
 
-        content.innerHTML = `<li class="list-group-item"><strong>${result.title}</strong></li>
-        <li class="list-group-item">${result.author}</li>
-        <li class="list-group-item">${result.publisher}</li>
-        <li class="list-group-item">${result.thickness}</li>
-        <li class="list-group-item">${result.publication}</li>
-        <li class="list-group-item">${result.description}</li>`;
+        content.innerHTML = `<li class="list-group-item py-1"><strong>${result.title}</strong></li>
+        <li class="list-group-item py-1"> Author : ${result.author}</li>
+        <li class="list-group-item py-1">Publisher : ${result.publisher}</li>
+        <li class="list-group-item py-1">Thickness : ${result.thickness}</li>
+        <li class="list-group-item py-1">Publication : ${result.publication}</li>
+        <li class="list-group-item py-1">${result.description}</li>`;
     }
 };
 
