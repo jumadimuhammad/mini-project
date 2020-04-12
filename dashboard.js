@@ -97,11 +97,11 @@ if (isLog == "true") {
 
             img.innerHTML = `<img
             src="${result.picture}"
-            class="img-fluid"
+            class="img-thumbnail"
             alt=""/> 
-            <p class="mt-2">Rp. ${result.price}</p>`;
+            <p class="mt-2 text-info">Rp. ${result.price}</p>`;
 
-            content.innerHTML = `<li class="list-group-item">${result.title}</li>
+            content.innerHTML = `<li class="list-group-item"><strong>${result.title}</strong></li>
             <li class="list-group-item"> Author : ${result.author}</li>
             <li class="list-group-item">Publisher : ${result.publisher}</li>
             <li class="list-group-item">Thickness : ${result.thickness}</li>

@@ -44,12 +44,15 @@ if (isLog == "true") {
 
             img.innerHTML = `<img
             src="${result.avatar}"
-            class="img-fluid"
+            class="img-thumbnail"
             alt=""/>`;
 
-            content.innerHTML = `<li class="list-group-item">${result.fullName}</li>
-            <li class="list-group-item">${result.userName}</li>
-            <li class="list-group-item">${result.email}</li>`;
+            content.innerHTML = `
+            <li class="list-group-item"><p>Id : ${result.id} </p></li>
+            <li class="list-group-item"><p>Full name : ${result.fullName} </p></li>
+            <li class="list-group-item"><p>User name : ${result.userName} </p></li>
+            <li class="list-group-item"><p>Email : ${result.email} </p></li>            
+            <li class="list-group-item"><p>Created : ${result.createdAt} </p></li>`;
         }
     };
 
