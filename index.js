@@ -55,9 +55,9 @@ const readDetail = async (event) => {
 
         img.innerHTML = `<img
         src="${result.picture}"
-        class="img-fluid"
+        class="img-thumbnail"
         alt=""/> 
-        <p class="mt-2">Rp. ${result.price}</p>`;
+        <p class="mt-2 text-info">Rp. ${result.price}</p>`;
 
         content.innerHTML = `<li class="list-group-item py-1"><strong>${result.title}</strong></li>
         <li class="list-group-item py-1"> Author : ${result.author}</li>
