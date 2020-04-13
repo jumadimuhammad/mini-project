@@ -20,8 +20,9 @@ const getData = async () => {
         display.innerHTML += `<div class="col-md-4 my-2">
         <div class="card card-1">
             <div class="row no-gutters">
-                <div class="col-sm-4">
-                    <img src="${element.picture}" alt="image" class="img-thumbnail" />                    
+                <div class="col-sm-4 text-center">
+                    <img src="${element.picture}" alt="image" class="img-thumbnail" />
+                    <i class="fas fa-star text-warning"></i><span> ${element.rating} </span>                    
                 </div>
                 <div class="col-sm-8">
                 <div class="card-body">

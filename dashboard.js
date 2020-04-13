@@ -4,9 +4,9 @@ if (isLog == "true") {
     const url = "https://5e8f22bbfe7f2a00165eeedf.mockapi.io/book";
     const display = document.querySelector("#display");
 
-    const getData = async () => {
+    const getData = async (filter) => {
         const response = await fetch(url);
-        const result = await response.json();
+        const result = Array.isArray(filter)? filter : await response.json();
         const idUser = localStorage.getItem("idUser");
 
         display.innerHTML = "";
@@ -17,8 +17,9 @@ if (isLog == "true") {
                 display.innerHTML += `<div class="col-md-4 my-2">
             <div class="card card-1">
             <div class="row no-gutters">
-                    <div class="col-sm-4">
-                        <img src="${element.picture}" alt="image" class="img-thumbnail" />                    
+                    <div class="col-sm-4 text-center">
+                        <img src="${element.picture}" alt="image" class="img-thumbnail" />
+                        <i class="fas fa-star text-warning"></i><span> ${element.rating} </span>                     
                         </div>
                     <div class="col-sm-8">
                         <div class="card-body">
@@ -51,6 +52,7 @@ if (isLog == "true") {
         const publication = document.querySelector("#publication").value;
         const description = document.querySelector("#description").value;
         const price = document.querySelector("#price").value;
+        const rating = document.querySelector("#rating").value;
         const idUser = localStorage.getItem("idUser");
 
         const add = {
@@ -61,6 +63,7 @@ if (isLog == "true") {
             publication,
             description,
             price,
+            rating,
             key: idUser,
         };
 
@@ -141,9 +144,13 @@ if (isLog == "true") {
             <div class="form-group">
                 <textarea class="form-control" type="text" id="edit-description" placeholder="Description of book" required>${result.description}</textarea>
             </div>
-            <div class="form-group">
-                <input class="form-control" type="text" id="edit-price" placeholder="Price of book" value="${result.price}" required
-                />
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input class="form-control" type="number" id="price" placeholder="Price of book" value="${result.price}" required/>
+                </div>
+                <div class="form-group col-md-6">
+                    <input class="form-control" type="number" maxlength="5" minlength="1" id="rating" placeholder="Rating of book (1-5)" value="${result.rating}" required/>
+                </div>
             </div>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             <button class="btn btn-primary update-button" type="submit" id="${result.id}">Update</button>`;
@@ -163,6 +170,7 @@ if (isLog == "true") {
             const description = document.querySelector("#edit-description")
                 .value;
             const price = document.querySelector("#edit-price").value;
+            const rating = document.querySelector("#edit-rating").value;
 
             const update = {
                 title,
@@ -172,6 +180,7 @@ if (isLog == "true") {
                 publication,
                 description,
                 price,
+                rating,
             };
             const id = event.target.id;
             const response = await fetch(`${url}/${id}`, {
