@@ -16,8 +16,7 @@ const getData = async () => {
     display.innerHTML = "";
 
     result.forEach((element) => {
-        // const newDiv = document.createElement("div");
-
+        let year = element.publication.slice(0, 4)
         display.innerHTML += `<div class="col-md-4 my-2">
         <div class="card card-1">
             <div class="row no-gutters">
@@ -30,7 +29,7 @@ const getData = async () => {
                 <hr class="my-1">
                 <p>${element.author}</p>
                 <hr class="my-1">
-                <p>${element.publication}</p>
+                <p>${year}</p>
                 <hr class="my-1">
                     <button class="btn btn-info btn-sm mt-2 readDetail-button" id="${element.id}" data-toggle="modal" data-target="#detail">Detail</button>
                 </div>
