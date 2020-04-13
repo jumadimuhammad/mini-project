@@ -13,6 +13,7 @@ if (isLog == "true") {
 
         result.forEach((element) => {
             if (element.key == idUser) {
+                let year = element.publication.slice(0, 4)
                 display.innerHTML += `<div class="col-md-4 my-2">
             <div class="card card-1">
             <div class="row no-gutters">
@@ -25,7 +26,7 @@ if (isLog == "true") {
                         <hr>
                         <p>${element.author}</p>
                         <hr>
-                        <p>${element.publication}</p>
+                        <p>${year}</p>
                         <hr>
                             <button class="btn btn-info btn-sm mt-2 readDetail-button" data-toggle="modal" id="readDetail-${element.id}" data-target="#exampleModalCenter">Detail</button>
                             <button class="btn btn-warning btn-sm mt-2 edit-button" id="${element.id}" data-toggle="modal" data-target="#edit">Edit</button>
@@ -131,10 +132,10 @@ if (isLog == "true") {
                     required/>
                 </div>
                 <div class="form-group col-md-4">
-                    <input class="form-control" type="text" id="edit-thickness" placeholder="Thickness of page" value="${result.thickness}" required />
+                    <input class="form-control" type="number" id="edit-thickness" placeholder="Thickness of page" value="${result.thickness}" required />
                 </div>
                 <div class="form-group col-md-4">
-                    <input class="form-control" type="text" id="edit-publication" placeholder="Year of publication" value="${result.publication}" required/>
+                    <input class="form-control" type="date" id="edit-publication" placeholder="Year of publication" value="${result.publication}" required/>
                 </div>
             </div>
             <div class="form-group">
