@@ -101,7 +101,7 @@ if (isLog == "true") {
                                     <input
                                         class="form-control"
                                         type="password"
-                                        id="password"
+                                        id="password1"
                                         placeholder="Confirm new password" value="${result.password}"
                                         required
                                     />
@@ -116,26 +116,31 @@ if (isLog == "true") {
     const editForm = document.querySelector("#edit-form");
     const editProfile = async (event) => {
         event.preventDefault();
-        console.log(event.target.matches(".update-button"));
         if (event.target.matches(".update-button")) {
-            const fullName = document.getElementById("fullName").value;
-            const password = document.getElementById("password").value;
+            const pwd1 = document.querySelector("#password").value;
+            const pwd2 = document.querySelector("#password1").value;
+            if (pwd1 == pwd2) {
+                const fullName = document.getElementById("fullName").value;
+                const password = document.getElementById("password").value;
 
-            const update = {
-                fullName,
-                password,
-            };
-            const id = event.target.id;
-            const response = await fetch(`${url}/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(update),
-            });
+                const update = {
+                    fullName,
+                    password,
+                };
+                const id = event.target.id;
+                const response = await fetch(`${url}/${id}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(update),
+                });
 
-            await response.json();
-            location.reload();
+                await response.json();
+                location.reload();
+            } else {
+                alert("Passwords don't match");
+            }
         }
     };
 
