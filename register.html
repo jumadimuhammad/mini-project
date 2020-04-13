@@ -98,6 +98,7 @@
                                         type="text"
                                         id="userName"
                                         placeholder="User name"
+                                        pattern="[A-z]{1,12}"
                                         required
                                     />
                                 </div>
@@ -124,7 +125,7 @@
                                         <input
                                             class="form-control"
                                             type="password"
-                                            id="password"
+                                            data-match="#password"
                                             placeholder="Confirm password"
                                             required
                                         />
