@@ -95,7 +95,12 @@
                     >
                 </h3>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="searchCollection" placeholder="Search" />
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="searchCollection"
+                        placeholder="Search"
+                    />
                 </div>
 
                 <div class="row" id="display">
@@ -197,19 +202,18 @@
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <input
-                                                class="form-control"
-                                                type="number"
-                                                id="price"
-                                                placeholder="Price of book"
-                                                required
-                                            />
+                                                    class="form-control"
+                                                    type="number"
+                                                    id="price"
+                                                    placeholder="Price of book"
+                                                    required
+                                                />
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <input
                                                     class="form-control"
-                                                    type="number"
-                                                    maxlength="5"
-                                                    minlength="1"
+                                                    type="text"
+                                                    pattern="[1-5]{1}"
                                                     id="rating"
                                                     placeholder="Rating of book (1-5)"
                                                     required

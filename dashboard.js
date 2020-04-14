@@ -146,10 +146,10 @@ if (isLog == "true") {
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
-                    <input class="form-control" type="number" id="price" placeholder="Price of book" value="${result.price}" required/>
+                    <input class="form-control" type="number" id="edit-price" placeholder="Price of book" value="${result.price}" required/>
                 </div>
                 <div class="form-group col-md-6">
-                    <input class="form-control" type="number" maxlength="5" minlength="1" id="rating" placeholder="Rating of book (1-5)" value="${result.rating}" required/>
+                    <input class="form-control" type="text" pattern="[1-5]{1}" id="edit-rating" placeholder="Rating of book (1-5)" value="${result.rating}" required/>
                 </div>
             </div>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
